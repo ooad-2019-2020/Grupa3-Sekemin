@@ -3,6 +3,8 @@ Studenti: Kemal Lazović, Semir Suljević i Emin Šiljak.
 
 Tema: Upravljanje studentskim domom
 
+
+
 Akteri:
 
   Student
@@ -15,7 +17,10 @@ Akteri:
   
   Upravitelj sobom za zabavu
   
+  
+  
 Funkcionalnosti i procesi:
+
   Student zadužuje sobu od upravitelja zaduživanja soba
   
   Upravitelj zaduživanja soba može odobriti zahtjev za zaduživanje sobe
@@ -33,6 +38,8 @@ Funkcionalnosti i procesi:
   Upravitelj bibliotekom može odobriti zahtjev za podizanje knjige
   
   Upravitelj hranom vodi evidenciju da je menu ažuriran u skladu sa studentskom kuhinjom
+ 
+ 
  
  
   Opis:
