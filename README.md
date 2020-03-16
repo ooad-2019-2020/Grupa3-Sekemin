@@ -17,22 +17,14 @@ Akteri:
   
 Funkcionalnosti i procesi:
 
-  Student zadužuje sobu od upravitelja zaduživanja soba
-  
-  Upravitelj zaduživanja soba može odobriti zahtjev za zaduživanje sobe
-  
-  Student može rezervisati termin u sobi za zabavu
-  
-  Upravitelj sobom za zabavu može odobriti zahtjev za korištenje iste i vodi evidencije o dostupnosti sobe
-  
-  Student može koristiti bonove za hranu
-  
-  Student trošenjem novca u menzi zarađuje bonove
-  
-  Student može poslati zahtjev za podizanje knjige biblioteci
-  
-  Upravitelj bibliotekom može odobriti zahtjev za podizanje knjige
-  
+  Student zadužuje sobu od upravitelja zaduživanja soba  
+  Upravitelj zaduživanja soba može odobriti zahtjev za zaduživanje sobe  
+  Student može rezervisati termin u sobi za zabavu  
+  Upravitelj sobom za zabavu može odobriti zahtjev za korištenje iste i vodi evidencije o dostupnosti sobe  
+  Student može koristiti bonove za hranu  
+  Student trošenjem novca u menzi zarađuje bonove  
+  Student može poslati zahtjev za podizanje knjige biblioteci  
+  Upravitelj bibliotekom može odobriti zahtjev za podizanje knjige  
   Upravitelj hranom vodi evidenciju da je menu ažuriran u skladu sa studentskom kuhinjom
  
  
