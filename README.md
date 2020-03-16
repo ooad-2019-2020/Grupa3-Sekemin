@@ -4,9 +4,13 @@ Tema: Upravljanje studentskim domom
 
 Akteri:
   Student
+  
   Upravitelj zaduživanja soba
+  
   Upravitelj bibliotekom
+  
   Upravitelj hranom
+  
   Upravitelj sobom za zabavu
   
 Funkcionalnosti i procesi:
