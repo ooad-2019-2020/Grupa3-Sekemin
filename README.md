@@ -65,6 +65,8 @@
     <li>Zahtjev za podizanje knjige u biblioteci</li>
     <li>Ažuriranje menua kuhinje</li>
     <li>Odobravanja zahtjeva za knjigu</li>
+    <li>Nabavka svih potrebnih dobara</li>
+    <li>Zapošljavanje i otpuštanje radnik </li>
 </ul>
     
 
