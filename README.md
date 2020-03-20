@@ -1,6 +1,10 @@
-<h1># Grupa3-Sekemin</h1>
+<h1>Aplikacija za studentski dom</h1>
+<h1>Grupa Sekemin</h1>
+<ul>
+    <li>Kemal L</li>
+    <li href="https://github.com/ssuljevic">Semir Suljević</li>
 Studenti: Kemal Lazović, Semir Suljević i Emin Šiljak.
-
+</ul>
 Tema: Upravljanje studentskim domom
 
 
