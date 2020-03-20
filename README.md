@@ -19,9 +19,9 @@
   
 <h1>Funkcionalnosti</h1>
 
-    <ul style="list-style-type:disc;">  
+<ul style="list-style-type:disc;">  
   
-    <li>Zaduživanje sobe</li>
+<li>Zaduživanje sobe</li>
     <li>Vođenje evidencije o dostupnosti soba</li>
     <li>Rezervacija termina u sobi za zabavu</li>
     <li>Vođenje evidencije o sobi za zabavu</li>
@@ -30,8 +30,11 @@
     <li>Ažuriranje menua kuhinje</li>
     <li>Odobravanja zahtjeva za knjigu</li>
     <li>Zamjena bonova u kuhinji</li>
-    </ul>
+</ul>
     
+
+  
+  
 <h1>Akteri</h1>
  
  
@@ -41,8 +44,6 @@
     <li>Upravitelj hranom</li>
     <li>Upravitelj sobom za zabavu</li>
   </ul>
-  
-  
   
   
   
