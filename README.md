@@ -33,6 +33,12 @@
     <li>Razduživanje sobe</li>
 </ul>
   
+  <h2>Upravitelj bibliotekom</h2>
+  <ul>
+    <li>Upravlja zahtjevima za knjiga</li>
+    <li>Vodi računa o vraćanju knjiga</li>
+  </ul>
+  
   <h2>Upravitelj hranom</h2>
   <ul>
     <li>Ažuriranje menua</li>
