@@ -23,6 +23,7 @@
     <li>Rezervisanje termina u sobi za zabavu</li>
     <li>Podizanje knjige iz biblioteke</li>
     <li>Produžavanje boravka</li>
+    <li>Trošenje bonova na hranu</li>
  </ul>
  
  <h2>Upravitelj zaduživanja soba</h2>
@@ -72,7 +73,8 @@
     <li>Ažuriranje menua kuhinje</li>
     <li>Odobravanja zahtjeva za knjigu</li>
     <li>Nabavka svih potrebnih dobara</li>
-    <li>Zapošljavanje i otpuštanje radnik </li>
+    <li>Zapošljavanje i otpuštanje radnika </li>
+    <li>Trošenje bonova na hranu</li>
 </ul>
     
 
