@@ -79,6 +79,7 @@
     <li>Student</li>
     <li>Upravitelj zaduživanja soba</li>
     <li>Upravitelj hranom</li>
+    <li>Upravitelj bibliotekom</li>
     <li>Upravitelj sobom za zabavu</li>
     <li>Kuhar</li>
   </ul>
