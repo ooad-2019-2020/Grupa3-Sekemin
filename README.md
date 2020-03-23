@@ -42,9 +42,7 @@
   
   <h2>Upravitelj hranom</h2>
   <ul>
-    <li>Ažuriranje menua</li>
-    <li>Upravljanje menzom</li>
-    <li>Nabavka svih potrebnih namirnica</li>
+    <li>Ažuriranje menua</li>   
     <li>Zapošljavanje i otpuštanje radnika</li>
 </ul>
   
@@ -57,7 +55,7 @@
   <h2>Kuhar</h2>
   <ul>
     <li>Spremanje jela</li>
-    <li>Nabavka potrebnih namirnica preko upravitelja za hranu</li>
+    
   </ul>
   
 <h1>Funkcionalnosti</h1>
