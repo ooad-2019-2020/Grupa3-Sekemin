@@ -2823,7 +2823,8 @@
 								},
 								"reference": {
 									"$ref": "AAAAAAFxrd1BMcCamaI="
-								}
+								},
+								"cardinality": "1..*"
 							},
 							"end2": {
 								"_type": "ERDRelationshipEnd",
@@ -2833,8 +2834,7 @@
 								},
 								"reference": {
 									"$ref": "AAAAAAFxsDUJRfjT7yk="
-								},
-								"cardinality": "1..*"
+								}
 							}
 						},
 						{
