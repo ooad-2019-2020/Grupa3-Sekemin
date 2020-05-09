@@ -483,7 +483,7 @@
 															"top": 47,
 															"width": 142,
 															"height": 13,
-															"text": "Lifeline1"
+															"text": "Radnik"
 														},
 														{
 															"_type": "LabelView",
@@ -1868,7 +1868,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx8FcRFIvCjRs="
 									},
-									"name": "Lifeline1",
+									"name": "Radnik",
 									"represent": {
 										"$ref": "AAAAAAFx8FgBXIwzTK8="
 									},
@@ -1905,7 +1905,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFx8FcRFIvBa/E="
 							},
-							"name": "Role1"
+							"name": "Role1",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1913,7 +1914,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFx8FcRFIvBa/E="
 							},
-							"name": "Role2"
+							"name": "Role2",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1921,7 +1923,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFx8FcRFIvBa/E="
 							},
-							"name": "Role3"
+							"name": "Role3",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1929,8 +1932,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFx8FcRFIvBa/E="
 							},
-							"name": "Role4",
-							"type": ""
+							"name": "Role4"
 						}
 					]
 				}
