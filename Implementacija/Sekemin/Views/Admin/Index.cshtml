@@ -1,0 +1,99 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model Tuple<IEnumerable<Osoba>, IEnumerable<IdentityRole>>
+
+@{ 
+    ViewBag.Title = "Korisnici aplikacije";
+}
+
+<h1 style="margin-bottom:50px"> @ViewBag.Title</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+           @{ 
+               var osoba = Model.Item1 as Osoba;
+           }
+            <th>
+                @Html.DisplayNameFor(model => osoba.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => osoba.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => osoba.Grad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => osoba.Uloga)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item1)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Uloga)
+                </td>
+                <td>
+                    
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>               
+        }
+    </tbody>
+</table>
+
+<div>
+
+    <p>Lista svih prava pristupa</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Naziv uloge
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                var lista = Model.Item2;
+                foreach(var item in lista)
+                {
+                    <tr>
+                        <td>
+                           @item
+                        </td>
+                    </tr>
+                }
+            }
+            
+        </tbody>
+
+    </table>
+    <div style="float:right;">
+        <form method="get">
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

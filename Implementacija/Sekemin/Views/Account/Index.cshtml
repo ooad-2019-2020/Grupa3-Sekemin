@@ -1,0 +1,20 @@
+﻿@Html.ActionLink("Link Name", "Index", "Admin", null, null)
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @using (Html.BeginForm("KreirajUlogu", "Account", FormMethod.Post))
+    {
+        <button type="submit" class="btn btn-primary">Kreiraj</button>
+    }
+    @using (Html.BeginForm("DodijeliUlogu", "Account", FormMethod.Post))
+    {
+        <button type="submit" class="btn btn-primary">Dodijeli</button>
+    }
+
+    <p>Trenutni korisnik je @ViewData["Korisnik"]</p>
+</div>
