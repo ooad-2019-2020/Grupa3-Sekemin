@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wqF4z0eN0ZWUS7EWfqoFsLfuBpe6XfULDgKQrmyu689/FUBx4JkcsY9Kp6tV3nWIlWfPVDO+GSv5AYHk7buapw==",
+  "dgSpecHash": "o1QVrzL1EVHhAAnMO2Tt9/a/A8kP74U+GR9jCfI2pPxBdukjuayu0nUIurLQKMdG9OQU5N3vl5KKbuG83yAQng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASRock pro\\source\\repos\\Sekemin\\Sekemin.csproj",
+  "projectFilePath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASRock pro\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\ASRock pro\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",

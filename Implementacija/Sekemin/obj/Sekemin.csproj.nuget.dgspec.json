@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASRock pro\\source\\repos\\Sekemin\\Sekemin.csproj": {}
+    "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASRock pro\\source\\repos\\Sekemin\\Sekemin.csproj": {
+    "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASRock pro\\source\\repos\\Sekemin\\Sekemin.csproj",
+        "projectUniqueName": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
         "projectName": "Sekemin",
-        "projectPath": "C:\\Users\\ASRock pro\\source\\repos\\Sekemin\\Sekemin.csproj",
+        "projectPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
         "packagesPath": "C:\\Users\\ASRock pro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASRock pro\\source\\repos\\Sekemin\\obj\\",
+        "outputPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
