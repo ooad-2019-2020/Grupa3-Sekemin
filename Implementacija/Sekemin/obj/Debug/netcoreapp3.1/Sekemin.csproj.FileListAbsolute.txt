@@ -699,3 +699,8 @@ C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Imp
 C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Jeloes\Details.cshtml.g.cs
 C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Jeloes\Edit.cshtml.g.cs
 C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Jeloes\Index.cshtml.g.cs
+C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Rezervacijas\Create.cshtml.g.cs
+C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Rezervacijas\Delete.cshtml.g.cs
+C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Rezervacijas\Details.cshtml.g.cs
+C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Rezervacijas\Edit.cshtml.g.cs
+C:\Users\Republic of Gamers\VisualStudioProjects\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Rezervacijas\Index.cshtml.g.cs

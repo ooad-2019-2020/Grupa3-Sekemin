@@ -10,23 +10,23 @@ using Sekemin.Models;
 
 namespace Sekemin.Controllers
 {
-    public class RezervacijaController : Controller
+    public class RezervacijasController : Controller
     {
         private readonly BazaContext _context;
 
-        public RezervacijaController(BazaContext context)
+        public RezervacijasController(BazaContext context)
         {
             _context = context;
         }
 
-        // GET: Rezervacija
+        // GET: Rezervacijas
         public async Task<IActionResult> Index()
         {
             var bazaContext = _context.Rezervacija.Include(r => r.Student).Include(r => r.Zahtjev);
             return View(await bazaContext.ToListAsync());
         }
 
-        // GET: Rezervacija/Details/5
+        // GET: Rezervacijas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -46,7 +46,7 @@ namespace Sekemin.Controllers
             return View(rezervacija);
         }
 
-        // GET: Rezervacija/Create
+        // GET: Rezervacijas/Create
         public IActionResult Create()
         {
             ViewData["StudentId"] = new SelectList(_context.Student, "Id", "Id");
@@ -54,7 +54,7 @@ namespace Sekemin.Controllers
             return View();
         }
 
-        // POST: Rezervacija/Create
+        // POST: Rezervacijas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -72,7 +72,7 @@ namespace Sekemin.Controllers
             return View(rezervacija);
         }
 
-        // GET: Rezervacija/Edit/5
+        // GET: Rezervacijas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -90,7 +90,7 @@ namespace Sekemin.Controllers
             return View(rezervacija);
         }
 
-        // POST: Rezervacija/Edit/5
+        // POST: Rezervacijas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -127,7 +127,7 @@ namespace Sekemin.Controllers
             return View(rezervacija);
         }
 
-        // GET: Rezervacija/Delete/5
+        // GET: Rezervacijas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -147,7 +147,7 @@ namespace Sekemin.Controllers
             return View(rezervacija);
         }
 
-        // POST: Rezervacija/Delete/5
+        // POST: Rezervacijas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

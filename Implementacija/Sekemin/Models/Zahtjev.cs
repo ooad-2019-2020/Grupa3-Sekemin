@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Sekemin.Models
 {
-    public abstract class Zahtjev
+    public class Zahtjev
     {
         public int Id { get; set; }
         public string StudentId { get; set; }
