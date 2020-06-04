@@ -45,7 +45,8 @@ namespace Sekemin.Controllers
         }
 
         // GET: Jeloes/Create
-        
+        [Authorize (Roles = "Administrator")]
+        [Authorize (Roles = "Upravitelj hranom")]
         public IActionResult Create()
         {
             return View();
@@ -56,6 +57,8 @@ namespace Sekemin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Upravitelj hranom")]
         public async Task<IActionResult> Create([Bind("Id,Naziv")] Jelo jelo)
         {
             if (ModelState.IsValid)
@@ -68,6 +71,8 @@ namespace Sekemin.Controllers
         }
 
         // GET: Jeloes/Edit/5
+        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Upravitelj hranom")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -88,6 +93,8 @@ namespace Sekemin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Upravitelj hranom")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Naziv")] Jelo jelo)
         {
             if (id != jelo.Id)
@@ -119,6 +126,8 @@ namespace Sekemin.Controllers
         }
 
         // GET: Jeloes/Delete/5
+        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Upravitelj hranom")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -139,6 +148,8 @@ namespace Sekemin.Controllers
         // POST: Jeloes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Upravitelj hranom")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var jelo = await _context.Jelo.FindAsync(id);
