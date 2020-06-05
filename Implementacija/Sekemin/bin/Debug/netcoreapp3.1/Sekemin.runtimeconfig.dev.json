@@ -1,9 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\ASRock pro\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ASRock pro\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "C:\\Users\\Emin Šiljak\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Emin Šiljak\\.nuget\\packages"
     ]
   }
 }

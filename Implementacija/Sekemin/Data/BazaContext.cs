@@ -50,6 +50,8 @@ namespace Sekemin.Data
 
         }
 
+        public DbSet<Sekemin.Models.Rezervacija> Rezervacija { get; set; }
+
 
     }
 }
