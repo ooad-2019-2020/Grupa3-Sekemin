@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sekemin.Data;
 
 namespace Sekemin.Data.Migrations
 {
     [DbContext(typeof(BazaContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200603194313_OOAD-Sekemin")]
+    partial class OOADSekemin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -470,9 +472,6 @@ namespace Sekemin.Data.Migrations
             modelBuilder.Entity("Sekemin.Models.Student", b =>
                 {
                     b.HasBaseType("Sekemin.Models.Osoba");
-
-                    b.Property<int>("BrojBonova")
-                        .HasColumnType("int");
 
                     b.Property<string>("Fakultet")
                         .IsRequired()

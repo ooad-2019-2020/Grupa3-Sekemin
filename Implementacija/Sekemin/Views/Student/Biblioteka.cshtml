@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Sekemin.Models.Knjiga>
+@{
+    ViewData["Title"] = "Biblioteka";
+}
+
+    <div class="list-group" style="max-height: 100px; margin-top: 10%; position: center; width: 100%">
+        @foreach (var item in Model) {
+            <a href="#" class="list-group-item">@Html.DisplayFor(modelItem => item.NazivDjela)</a>
+        }
+    </div>
+
+<div style="margin-top: 200px; width: 100%">
+    <button type="button" onclick="location.href = '@Url.Action("PodigniKnjigu", "Student")'" style="margin-left:50%;">Podigni knjigu</button>
+</div>

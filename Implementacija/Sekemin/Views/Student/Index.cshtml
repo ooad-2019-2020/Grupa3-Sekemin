@@ -1,0 +1,60 @@
+﻿@model Sekemin.Models.Student
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style type="text/css">
+    #div.center{
+        text-align: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    #header{
+        text-align: center;
+    }
+
+    .left_btn{
+        float: left;
+    }
+
+    .right_btn{
+        float: right;
+    }
+
+
+</style>
+
+    <div id="div.center">
+        <h1 id="header">Dobrodošli IME_STUDENTA </h1>
+    </div>
+    <div style="float:left; width:50%;">
+        <button type="button" style="float: left">Uplata sredstava</button>
+    </div>
+
+    <div style="float: right; width:50%;">
+        <button type="button" style="float: right">Razduži se</button>
+    </div>
+
+    <div style="float: left; width: 50%; margin-top: 200px">
+        <button type="button" style="height: 150px; width: 50%; float: right; background-color: transparent">Produži boravak</button>
+    </div>
+
+    <div style="float: right; width: 50%; margin-top: 200px">
+        <button type="button" onclick="location.href='@Url.Action("Biblioteka", "Student")'" style="height: 150px; width: 50%; float: left; background-color: transparent">Podigni knjigu</button>
+    </div>
+
+    <div style="float: left; width: 50%;">
+        <button type="button" onclick="location.href = '@Url.Action("SobaZaZabavu", "Student")'" style="height: 150px; width: 50%; float: right; background-color: transparent">Rezerviši sobu za zabavu</button>
+    </div>
+
+    <div style="float: right; width: 50%;">
+        <button type="button" onclick="location.href='@Url.Action("Jelovnik", "Student")'" style="height: 150px; width: 50%; float: left; background-color: transparent">Šta je danas na meniju</button>
+    </div>
+
+    <div style="width: 100%; margin-top: 60%;">
+        <h6 style="float: left">Današnji datum</h6>
+        <button type="button" style="border-radius: 15px; float: right; background-color: transparent">?</button>
+        <h6 style="float: right; margin-right: 5px; margin-top: 5px;">Pomoć pri korištenju</h6>
+    </div>
+
