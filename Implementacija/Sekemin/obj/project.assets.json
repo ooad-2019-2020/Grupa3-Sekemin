@@ -8957,19 +8957,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emin Šiljak\\.nuget\\packages\\": {}
+    "C:\\Users\\ASRock pro\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emin Šiljak\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
+      "projectUniqueName": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
       "projectName": "Sekemin",
-      "projectPath": "C:\\Users\\Emin Šiljak\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
-      "packagesPath": "C:\\Users\\Emin Šiljak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emin Šiljak\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\obj\\",
+      "projectPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
+      "packagesPath": "C:\\Users\\ASRock pro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Emin Šiljak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASRock pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9049,5 +9053,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -47,11 +47,35 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Registruj korisnika</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/RegistrirajStudenta">Registruj studenta</a>
+                                </li>
+
                             }
-
-
-
-
+                            if (user.Uloga == Uloga.Student)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Biblioteka" asp-action="">Biblioteka</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="SobaZaZabavu" asp-action="">Soba za zabavu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-contoller="Student" asp-action="">Smještaj</a>
+                                </li>
+                            }
+                            if(user.Uloga == Uloga.UpraviteljSobomZaZabavu)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="">Bilo šta ocm</a>
+                                </li>
+                            }
+                            if(user.Uloga == Uloga.UpraviteljBibliotekom)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="">Isto bilo šta ba</a>
+                                </li>
+                            }
                         }
 
                     </ul>

@@ -698,3 +698,7 @@ C:\Users\Emin Šiljak\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Deb
 C:\Users\Emin Šiljak\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Jelovnik.cshtml.g.cs
 C:\Users\Emin Šiljak\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Biblioteka.cshtml.g.cs
 C:\Users\Emin Šiljak\source\repos\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\SobaZaZabavu.cshtml.g.cs
+C:\Users\ASRock pro\Desktop\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Biblioteka.cshtml.g.cs
+C:\Users\ASRock pro\Desktop\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
+C:\Users\ASRock pro\Desktop\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Jelovnik.cshtml.g.cs
+C:\Users\ASRock pro\Desktop\Grupa3-Sekemin\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\Student\SobaZaZabavu.cshtml.g.cs
