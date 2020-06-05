@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o1QVrzL1EVHhAAnMO2Tt9/a/A8kP74U+GR9jCfI2pPxBdukjuayu0nUIurLQKMdG9OQU5N3vl5KKbuG83yAQng==",
+  "dgSpecHash": "vspAfwOnQQ7Twt8ys0rJneO1M0UQYW4gLcziMroAltGswUIB9Fp9ScGqOCsv8QHQvno3aB/s7jNp1FGy+h3KGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
   "expectedPackageFiles": [
@@ -175,7 +175,8 @@
     "C:\\Users\\ASRock pro\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ASRock pro\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ASRock pro\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ASRock pro\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\ASRock pro\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\ASRock pro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
