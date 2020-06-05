@@ -9,7 +9,7 @@ namespace Sekemin.Models
     {
         public string UpraviteljZaduzivanjaSobaId { get; set; }
         
-        public DateTime Pocetak { get; set; }
+        //public DateTime Pocetak { get; set; }
         public DateTime Kraj { get; set; }
 
 
