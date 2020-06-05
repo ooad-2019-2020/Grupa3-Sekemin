@@ -13,5 +13,6 @@ namespace Sekemin.Models
         [Required]
         [Display(Name = "Godina studija")]
         public int GodinaStudija { get; set; }
+        public int BrojBonova { get; set; }
     }
 }

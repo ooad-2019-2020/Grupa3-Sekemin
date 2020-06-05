@@ -1,0 +1,35 @@
+﻿@model Sekemin.Models.Student
+
+@{
+    ViewData["Title"] = "SobaZaZabavu";
+}
+
+<div style="margin-top: 10px; width: 100%">
+    <h1 style="position: center">Rezervacija sobe za zabavu</h1>
+</div>
+
+<div style="margin-top: 50px; width: 100%">
+    <label>Datum rezervacije:</label>
+    <input type="date" id="datumRezervacijeSobe" style="margin-left: 20px" />
+</div>
+
+<br />
+
+<div style="width: 100%">
+    <label>Vrijeme početka:</label>
+    <input type="time" id="pocetakRezervacijeSobe" style="margin-left: 32px" />
+</div>
+
+<br />
+
+<div style="width: 100%">
+    <label>Vrijeme završetka:</label>
+    <input type="time" id="krajRezervacijeSobe" style="margin-left: 23px" />
+</div>
+
+<br />
+<br />
+
+<div style="width: 100%">
+    <button type ="button" style="margin-left: 150px">Rezerviši</button>
+</div>

@@ -356,24 +356,22 @@ namespace Sekemin.Data.Migrations
                     b.ToTable("Radnici");
                 });
 
-            modelBuilder.Entity("Sekemin.Models.RezervacijaSmjestaja", b =>
+            modelBuilder.Entity("Sekemin.Models.Rezervacija", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Kraj")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Pocetak")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("StudentId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("UpraviteljZaduzivanjaSobaId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ZahtjevId")
@@ -383,45 +381,11 @@ namespace Sekemin.Data.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.HasIndex("UpraviteljZaduzivanjaSobaId");
-
                     b.HasIndex("ZahtjevId");
 
-                    b.ToTable("RezervacijaSmjestaja");
-                });
+                    b.ToTable("Rezervacija");
 
-            modelBuilder.Entity("Sekemin.Models.RezervacijaSobeZaZabavu", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("Pocetak")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("StudentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<double>("Trajanje")
-                        .HasColumnType("float");
-
-                    b.Property<string>("UpraviteljSobomZaZabavuId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ZahtjevId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StudentId");
-
-                    b.HasIndex("UpraviteljSobomZaZabavuId");
-
-                    b.HasIndex("ZahtjevId");
-
-                    b.ToTable("RezervacijaSobeZaZabavu");
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Rezervacija");
                 });
 
             modelBuilder.Entity("Sekemin.Models.Sastojak", b =>
@@ -507,6 +471,9 @@ namespace Sekemin.Data.Migrations
                 {
                     b.HasBaseType("Sekemin.Models.Osoba");
 
+                    b.Property<int>("BrojBonova")
+                        .HasColumnType("int");
+
                     b.Property<string>("Fakultet")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -553,6 +520,36 @@ namespace Sekemin.Data.Migrations
                     b.HasBaseType("Sekemin.Models.Osoba");
 
                     b.HasDiscriminator().HasValue("UpraviteljZaduzivanjaSoba");
+                });
+
+            modelBuilder.Entity("Sekemin.Models.RezervacijaSmjestaja", b =>
+                {
+                    b.HasBaseType("Sekemin.Models.Rezervacija");
+
+                    b.Property<DateTime>("Kraj")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpraviteljZaduzivanjaSobaId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasIndex("UpraviteljZaduzivanjaSobaId");
+
+                    b.HasDiscriminator().HasValue("RezervacijaSmjestaja");
+                });
+
+            modelBuilder.Entity("Sekemin.Models.RezervacijaSobeZaZabavu", b =>
+                {
+                    b.HasBaseType("Sekemin.Models.Rezervacija");
+
+                    b.Property<double>("Trajanje")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UpraviteljSobomZaZabavuId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasIndex("UpraviteljSobomZaZabavuId");
+
+                    b.HasDiscriminator().HasValue("RezervacijaSobeZaZabavu");
                 });
 
             modelBuilder.Entity("Sekemin.Models.ZahtjevSobaZaZabavu", b =>
@@ -684,36 +681,13 @@ namespace Sekemin.Data.Migrations
                         .HasForeignKey("EvidencijaRadnikaId");
                 });
 
-            modelBuilder.Entity("Sekemin.Models.RezervacijaSmjestaja", b =>
+            modelBuilder.Entity("Sekemin.Models.Rezervacija", b =>
                 {
                     b.HasOne("Sekemin.Models.Student", "Student")
                         .WithMany()
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Sekemin.Models.UpraviteljZaduzivanjaSoba", "UpraviteljZaduzivanjaSoba")
-                        .WithMany("RezervacijaSmjestaja")
-                        .HasForeignKey("UpraviteljZaduzivanjaSobaId");
-
-                    b.HasOne("Sekemin.Models.Zahtjev", "Zahtjev")
-                        .WithMany()
-                        .HasForeignKey("ZahtjevId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Sekemin.Models.RezervacijaSobeZaZabavu", b =>
-                {
-                    b.HasOne("Sekemin.Models.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Sekemin.Models.UpraviteljSobomZaZabavu", "UpraviteljSobomZaZabavu")
-                        .WithMany("Rezervacije")
-                        .HasForeignKey("UpraviteljSobomZaZabavuId");
 
                     b.HasOne("Sekemin.Models.Zahtjev", "Zahtjev")
                         .WithMany()
@@ -760,6 +734,20 @@ namespace Sekemin.Data.Migrations
                         .HasForeignKey("MenuId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Sekemin.Models.RezervacijaSmjestaja", b =>
+                {
+                    b.HasOne("Sekemin.Models.UpraviteljZaduzivanjaSoba", "UpraviteljZaduzivanjaSoba")
+                        .WithMany("RezervacijaSmjestaja")
+                        .HasForeignKey("UpraviteljZaduzivanjaSobaId");
+                });
+
+            modelBuilder.Entity("Sekemin.Models.RezervacijaSobeZaZabavu", b =>
+                {
+                    b.HasOne("Sekemin.Models.UpraviteljSobomZaZabavu", "UpraviteljSobomZaZabavu")
+                        .WithMany("Rezervacije")
+                        .HasForeignKey("UpraviteljSobomZaZabavuId");
                 });
 
             modelBuilder.Entity("Sekemin.Models.ZahtjevZaPodizanjeKnjige", b =>
