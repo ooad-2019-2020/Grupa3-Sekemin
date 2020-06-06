@@ -19,6 +19,8 @@ namespace Sekemin.Controllers
             _context = context;
         }
 
+        /*
+
         // GET: Zahtjev
         public async Task<IActionResult> Index()
         {
@@ -160,11 +162,8 @@ namespace Sekemin.Controllers
             return _context.Zahtjev.Any(e => e.Id == id);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> KreirajRezervaciju(ZahtjevZaSmjestaj zahtjev)
-        {
+        */
 
-        }
 
 
     }

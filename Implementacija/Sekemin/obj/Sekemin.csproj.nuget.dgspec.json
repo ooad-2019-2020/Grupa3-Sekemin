@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj": {}
+    "C:\\Users\\Republic of Gamers\\VisualStudioProjects\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj": {
+    "C:\\Users\\Republic of Gamers\\VisualStudioProjects\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
+        "projectUniqueName": "C:\\Users\\Republic of Gamers\\VisualStudioProjects\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
         "projectName": "Sekemin",
-        "projectPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
-        "packagesPath": "C:\\Users\\ASRock pro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\Sekemin\\obj\\",
+        "projectPath": "C:\\Users\\Republic of Gamers\\VisualStudioProjects\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\Sekemin.csproj",
+        "packagesPath": "C:\\Users\\Republic of Gamers\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Republic of Gamers\\VisualStudioProjects\\source\\repos\\Grupa3-Sekemin\\Implementacija\\Sekemin\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ASRock pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Republic of Gamers\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
