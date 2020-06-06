@@ -14,6 +14,7 @@ namespace Sekemin.Models
         public int Sprat { get; set; }
         [Required]
         [Display(Name = "Redni broj")]
+        public int RedniBroj { get; set; }
         public string StudentPrviId { get; set; }
         public string StudentDrugiId { get; set; }
 

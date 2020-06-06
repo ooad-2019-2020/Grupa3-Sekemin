@@ -63,6 +63,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-contoller="Student" asp-action="">Smještaj</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="ZahtjevZaSmjestaj" asp-action=""></a>
+                                </li>
                             }
                             if(user.Uloga == Uloga.UpraviteljSobomZaZabavu)
                             {
@@ -74,6 +77,15 @@
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="">Isto bilo šta ba</a>
+                                </li>
+                            }
+                            if(user.Uloga == Uloga.UpraviteljZaduzivanja)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Zahtjev" asp-action="GetZahtjeviZaSmjestaj">Zaduživanje</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Zahtjev" asp-action="GetZahtjeviZaRazduzivanje">Razduživanje</a>
                                 </li>
                             }
                         }

@@ -25,6 +25,16 @@ namespace Sekemin.Controllers
             return View(await _context.Zahtjev.ToListAsync());
         }
 
+        public async Task<IActionResult> GetZahtjeviZaSmjestaj()
+        {
+            return View(await _context.ZahtjevZaSmjestaj.ToListAsync());
+        }
+
+        public async Task<IActionResult> GetZahtjeviZaRazduzivanje()
+        {
+            return View(await _context.ZahtjevZaRazduzivanje.ToListAsync());
+        }
+
         // GET: Zahtjev/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -149,5 +159,13 @@ namespace Sekemin.Controllers
         {
             return _context.Zahtjev.Any(e => e.Id == id);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> KreirajRezervaciju(ZahtjevZaSmjestaj zahtjev)
+        {
+
+        }
+
+
     }
 }
