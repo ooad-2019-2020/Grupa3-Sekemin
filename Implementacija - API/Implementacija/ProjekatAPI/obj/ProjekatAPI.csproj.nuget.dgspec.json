@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj": {}
+    "C:\\Users\\ASRock pro\\Documents\\GitHub\\Grupa3-Sekemin\\Implementacija - API\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj": {
+    "C:\\Users\\ASRock pro\\Documents\\GitHub\\Grupa3-Sekemin\\Implementacija - API\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ASRock pro\\Documents\\GitHub\\Grupa3-Sekemin\\Implementacija - API\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj",
         "projectName": "ProjekatAPI",
-        "projectPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj",
+        "projectPath": "C:\\Users\\ASRock pro\\Documents\\GitHub\\Grupa3-Sekemin\\Implementacija - API\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj",
         "packagesPath": "C:\\Users\\ASRock pro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\ProjekatAPI\\obj\\",
+        "outputPath": "C:\\Users\\ASRock pro\\Documents\\GitHub\\Grupa3-Sekemin\\Implementacija - API\\Implementacija\\ProjekatAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9KfAgFm4aJKzkqg+WfBIYDOAENHmfBOvs6QNNX4Xq8oju1dHAHd7R5kSejUzl8CHglKEOwj5qveg2f0fepJHHg==",
+  "dgSpecHash": "9xkzIMD2F2TA1cKfgDhN3xiCrjurg/P157oDh2ZrfNit9x4fb11YeVj3ER9JSBleBtjIrvIZUbL+fmv2iP6CAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASRock pro\\Desktop\\Grupa3-Sekemin\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj",
+  "projectFilePath": "C:\\Users\\ASRock pro\\Documents\\GitHub\\Grupa3-Sekemin\\Implementacija - API\\Implementacija\\ProjekatAPI\\ProjekatAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASRock pro\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ASRock pro\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
