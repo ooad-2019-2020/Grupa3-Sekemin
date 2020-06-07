@@ -19,10 +19,22 @@ namespace Sekemin.Controllers
             _context = context;
         }
 
+        /*
+
         // GET: Zahtjev
         public async Task<IActionResult> Index()
         {
             return View(await _context.Zahtjev.ToListAsync());
+        }
+
+        public async Task<IActionResult> GetZahtjeviZaSmjestaj()
+        {
+            return View(await _context.ZahtjevZaSmjestaj.ToListAsync());
+        }
+
+        public async Task<IActionResult> GetZahtjeviZaRazduzivanje()
+        {
+            return View(await _context.ZahtjevZaRazduzivanje.ToListAsync());
         }
 
         // GET: Zahtjev/Details/5
@@ -149,5 +161,10 @@ namespace Sekemin.Controllers
         {
             return _context.Zahtjev.Any(e => e.Id == id);
         }
+
+        */
+
+
+
     }
 }

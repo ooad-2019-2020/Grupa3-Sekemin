@@ -24,13 +24,13 @@ namespace Sekemin.Controllers
 
         public IActionResult Index()
         {
-            var radnici = context.EvidencijaRadnika.Include(k => k.Radnici);
+           /* var radnici = context.EvidencijaRadnika.Include(k => k.Radnici);
             List<Radnik> radnici2 = new List<Radnik>();
-            foreach(var item in radnici)
+            foreach (var item in radnici)
             {
-                foreach(var r in item.Radnici)
+                foreach (var r in item.Radnici)
                 {
-                    radnici2.Add(r);  
+                    radnici2.Add(r);
                 }
             }
             var jela = context.Menu.Include(k => k.Jela);
@@ -43,7 +43,36 @@ namespace Sekemin.Controllers
                 }
             }
             var tuple = new Tuple<IEnumerable<Radnik>, IEnumerable<Jelo>>(radnici2, jela2);
-            return View(tuple);
+            return View(tuple);  */
+
+            
+        }
+
+
+        public IActionResult CreateRadnik()
+        {
+          //  ViewData["StudentId"] = new SelectList(_context.Student, "Id", "Id");
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateRadnik([Bind("Id,Ime,Prezime,DatumRodjenja")] Radnik radnik)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Add(radnik);
+                await context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+          //  ViewData["StudentId"] = new SelectList(_context.Student, "Id", "Id", knjiga.StudentId);
+            return View(radnik);
+        }
+
+        public IActionResult CreateJelo()
+        {
+            return View();
         }
     }
 }

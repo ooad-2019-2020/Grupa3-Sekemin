@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Sekemin.Models.ZahtjevZaSmjestaj>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soba.Sprat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soba.RedniBroj)
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soba.Sprat)
+                </td>
+                
+                <td>
+                    <a asp-controller="RezervacijaSmjestaja"  asp-action="Create">Odobri zahtjev</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

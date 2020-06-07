@@ -36,8 +36,24 @@ namespace Sekemin.Controllers
             return View(tuple);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> ObrisiKorisnika(string id)
+        {
+            var korisnik = await userManager.FindByIdAsync(id);
 
+            if( korisnik != null)
+            {
+                var result = await userManager.DeleteAsync(korisnik);
 
+                if(result.Succeeded)
+                {
+                    return RedirectToAction("Zahtjev", "GetZahtjeviZaRazduzivanje");
+                }
+
+            }
+
+            return View("NotFound");
+        }
 
         [HttpGet]
         public IActionResult KreirajUlogu()

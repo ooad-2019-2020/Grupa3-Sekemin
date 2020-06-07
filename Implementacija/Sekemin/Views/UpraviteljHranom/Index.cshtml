@@ -1,0 +1,120 @@
+﻿@model Tuple<IEnumerable<Radnik>, IEnumerable<Jelo>>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<style>
+    table {
+        border: 1px solid black;
+    }
+</style>
+
+
+<div id="div.center">
+    <h1 id="header">Dobrodošli IME_UPRAVITELJA </h1>
+</div>
+
+
+<div id="table.radnici" style="float: left; width: 50%; margin-top: 200px">
+
+    <h4 id="OpisTabeleRadnici" style="float:left"> Lista svih radnika </h4>
+    <table class="table">
+        <thead>
+            <tr>
+                @{
+                    var osoba = Model.Item1 as Radnik;
+                }
+                <th>
+                    @Html.DisplayNameFor(model => osoba.Ime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => osoba.Prezime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => osoba.DatumRodjenja)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Item1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prezime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DatumRodjenja)
+                    </td>
+                    <td>
+
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+
+    <div style="float:left; width:50%;">
+        <button type="button" onclick="location.href='@Url.Action("CreateRadnik", "UpraviteljHranom")'" style="float: right">Dodaj novog radnika</button>
+    </div>
+
+
+</div>
+
+
+
+<div id="table.jela" style="float: right; width: 50%; margin-top: 200px">
+
+    <h4 id="OpisTabeleJela" style="float:left"> Menu </h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                @{
+                    var jelo = Model.Item2 as Jelo;
+                }
+                <th>
+                    @Html.DisplayNameFor(model => jelo.Naziv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => jelo.Sastojci)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Item2)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naziv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sastojci)
+                    </td>
+                    <td>
+
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+    <div style="float:right; width:50%;">
+        <button type="button" onclick="location.href='@Url.Action("CreateJelo", "UpraviteljHranom")'" style="float: left">Dodaj novo jelo</button>
+    </div>
+
+
+</div>

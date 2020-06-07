@@ -5,8 +5,10 @@
     "\\Implementacija\\Sekemin",
     "\\Implementacija\\Sekemin\\Controllers",
     "\\Implementacija\\Sekemin\\Data",
+    "\\Implementacija\\Sekemin\\Properties",
     "\\Implementacija\\Sekemin\\Views",
-    "\\Implementacija\\Sekemin\\Views\\Jeloes"
+    "\\Implementacija\\Sekemin\\Views\\Jeloes",
+    "\\Implementacija\\Sekemin\\Views\\Zahtjev"
   ],
   "SelectedNode": "\\Implementacija\\Sekemin\\Sekemin.sln",
   "PreviewInSolutionExplorer": false
