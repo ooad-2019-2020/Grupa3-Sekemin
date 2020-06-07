@@ -1,0 +1,11 @@
+body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url("zabava.jpg");
+     background-repeat: no-repeat;
+    background-size:cover; 
+    height: 100vh;
+}
+
+div{
+    color: wheat;
+    
+}
