@@ -29,12 +29,13 @@
     <h1 id="header">Dobrodošli @ViewBag.Ime </h1>
 </div>
 <div style="float:left; width:50%;">
+   
     <button type="button" style="float: left; background-color: cornflowerblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Uplata sredstava</button>
 </div>
 
-<div style="float: right; width:50%;">
-    <button type="button" style="float: right; background-color: cornflowerblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Razduži se</button>
-</div>
+    <div style="float: right; width:50%;">
+        <button type="button" style="float: right; background-color: cornflowerblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"  ><a asp-action="Razduzivanje" asp-controller="Student">Razduživanje</a></button>
+    </div>
 
 <div style="float: left; width: 50%; margin-top: 200px">
     <button type="button" style="height: 150px; width: 70%; float: right; background-color: transparent; font-weight: bold; font-size: 40px">

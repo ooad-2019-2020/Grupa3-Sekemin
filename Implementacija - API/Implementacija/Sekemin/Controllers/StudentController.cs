@@ -32,24 +32,24 @@ namespace Sekemin.Controllers {
         {
             return userManager.GetUserId(HttpContext.User);
         }
-        public async void VratiKnjigu(int? knjigaId)
+        public  IActionResult VratiKnjigu(int? knjigaId)
         {
             if (knjigaId == null)
             {
-                return;
+                return NoContent();
             }
 
             var knjiga = context.Knjiga.FirstOrDefault(k => k.Id == knjigaId);
             if (knjiga == null)
             {
-                return;
+                return NoContent();
             }
 
             knjiga.StudentId = null;
             context.Update(knjiga);
             context.SaveChanges();
 
-            await Biblioteka();
+            return RedirectToAction("Biblioteka", "Student");
         }
 
 
@@ -63,33 +63,20 @@ namespace Sekemin.Controllers {
             var trenutni = getStudent();
             return View(new Tuple<IEnumerable<Jelo>, Student>(jela, trenutni));
         }
-        public void Rezervisi(DateTime datumRezervacijeSobe, DateTime pocetakRezervacijeSobe, DateTime krajRezervacijeSobe)
+
+
+        public async Task<IActionResult> Biblioteka()
         {
-            ZahtjevSobaZaZabavu zahtjev = new ZahtjevSobaZaZabavu();
-
-            zahtjev.StudentId = getKorisnik();
-
-            if (zahtjev.StudentId == null)
-            {
-                return;
-            }
-
-            TimeSpan ts = krajRezervacijeSobe - pocetakRezervacijeSobe;
-            if (krajRezervacijeSobe < pocetakRezervacijeSobe)
-            {
-                return;
-            }
-
-            zahtjev.Trajanje = ts.TotalMinutes;
-            zahtjev.DatumSlanja = datumRezervacijeSobe;
-
-            context.Add(zahtjev);
-            context.SaveChanges();
+            var bazaContext = context.Knjiga.Where(k => k.StudentId == null);
+            var tuple = new Tuple<IEnumerable<Knjiga>, Knjiga>(await bazaContext.ToListAsync(), GetPodignutaKnjiga());
+            return View(tuple);
         }
-
-        public async Task<IActionResult> Biblioteka() {
-            var bazaContext = context.Knjiga.Include(k => k.Student);
-            return View(await bazaContext.ToListAsync());
+        private Knjiga GetPodignutaKnjiga()
+        {
+            String studentId = getKorisnik();
+            if (studentId == null) return null;
+            var knjiga = context.Knjiga.FirstOrDefault(k => k.StudentId == studentId);
+            return knjiga;
         }
 
         public IActionResult SobaZaZabavu() {
@@ -98,37 +85,66 @@ namespace Sekemin.Controllers {
 
         //nisam jos siguran koji parametri se šalju ovdje
 
-        public void PlatiHranu(int id) {
-            var student = context.Student.FirstOrDefault(s => Int32.Parse(s.Id) == id);
+        public IActionResult PlatiHranu()
+        {
+            var studentId = getKorisnik();
 
-            if(student == null) {
+            var student = context.Student.FirstOrDefault(s => s.Id == studentId);
+
+            if (student == null || student.BrojBonova < 1)
+            {
                 Console.WriteLine("Korisnik nije student ili nije prijavljen");
+                return NoContent();
             }
+
+            student.BrojBonova = student.BrojBonova - 1;
+            context.Update(student);
+            context.SaveChanges();
+
+            return RedirectToAction("Jelovnik", "Student");
         }
 
-        public async Task<IActionResult> PodigniKnjigu(int studentId, Knjiga knjiga) {
-            var student = context.Student.FirstOrDefault(s => Int32.Parse(s.Id) == studentId);
+        public async Task<IActionResult> PodigniKnjigu(int? knjigaId)
+        {
+            if (knjigaId == null)
+            {
+                return NoContent();
+            }
+            var studentId = getKorisnik();
+            var student = context.Student.FirstOrDefault(s => s.Id != null && s.Id == studentId);
 
-            if(student == null) {
-                Console.WriteLine("Korisnik nije student ili nije prijavljen");
+            if (student == null)
+            {
+                return NoContent();
             }
 
-            var knjigaBaza = context.Knjiga.FirstOrDefault(k => k.Id == knjiga.Id && k.Student == null);
+            var knjigaBaza = context.Knjiga.FirstOrDefault(k => k.Id == knjigaId && k.Student == null);
 
-            if(knjigaBaza == null) {
+            if (knjigaBaza == null)
+            {
                 Console.WriteLine("Odabrana knjiga nije dostupna");
+                return NoContent();
             }
 
-            if (ModelState.IsValid) {
-                try {
-                    context.Update(knjiga);
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    ZahtjevZaPodizanjeKnjige zahtjev = new ZahtjevZaPodizanjeKnjige();
+                    zahtjev.Knjiga = knjigaBaza;
+                    zahtjev.KnjigaId = knjigaBaza.Id;
+                    zahtjev.Student = student;
+                    zahtjev.StudentId = student.Id;
+                    context.Add(zahtjev);
                     await context.SaveChangesAsync();
-                } catch (DbUpdateConcurrencyException) {
+                }
+                catch (DbUpdateConcurrencyException)
+                {
                     return NoContent();
                 }
             }
 
-            return View(knjigaBaza);
+            return RedirectToAction("Biblioteka", "Student");
         }
 
         public IActionResult Razduzivanje()

@@ -100,7 +100,8 @@ namespace Sekemin.Areas.Identity.Pages.Account
                         return RedirectToAction("Index", "UpraviteljBibliotekom");
                     if (korisnik.Uloga == Uloga.UpraviteljHranom)
                         return RedirectToAction("Index", "UpraviteljHranom");
-                    
+                    if (korisnik.Uloga == Uloga.UpraviteljSobomZaZabavu)
+                        return RedirectToAction("Index", "UpraviteljSobomZaZabavu");
                    // return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

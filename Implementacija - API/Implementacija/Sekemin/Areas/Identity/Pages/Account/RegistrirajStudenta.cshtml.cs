@@ -107,6 +107,7 @@ namespace Sekemin.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new Student { UserName = Input.Email, Email = Input.Email, Grad = Input.Grad, Ime = Input.Ime, Prezime = Input.Prezime, DatumRodjenja = Input.DatumRodjenja, Spol = Input.Spol, Uloga = Uloga.Student, Fakultet = Input.Fakultet, GodinaStudija = Input.GodinaStudija };
+                user.BrojBonova = 50;
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

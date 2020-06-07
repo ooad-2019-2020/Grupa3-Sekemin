@@ -1006,3 +1006,5 @@ C:\Users\ASRock pro\Documents\GitHub\Grupa3-Sekemin\Implementacija - API\Impleme
 C:\Users\ASRock pro\Documents\GitHub\Grupa3-Sekemin\Implementacija - API\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Sekemin.dll
 C:\Users\ASRock pro\Documents\GitHub\Grupa3-Sekemin\Implementacija - API\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Sekemin.pdb
 C:\Users\ASRock pro\Documents\GitHub\Grupa3-Sekemin\Implementacija - API\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Sekemin.genruntimeconfig.cache
+C:\Users\ASRock pro\Documents\GitHub\Grupa3-Sekemin\Implementacija - API\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\UpraviteljSobomZaZabavu\Index.cshtml.g.cs
+C:\Users\ASRock pro\Documents\GitHub\Grupa3-Sekemin\Implementacija - API\Implementacija\Sekemin\obj\Debug\netcoreapp3.1\Razor\Views\UpraviteljSobomZaZabavu\ObradaZahtjevaZaSobu.cshtml.g.cs

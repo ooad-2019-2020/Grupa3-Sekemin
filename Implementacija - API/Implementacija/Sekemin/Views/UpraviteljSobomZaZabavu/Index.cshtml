@@ -1,0 +1,13 @@
+﻿@model Sekemin.Models.UpraviteljSobomZaZabavu
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/zabava.css" />
+<div style="width: 100%">
+    <h1 style="margin-left: 17%; position: center">Početni ekran za Upravitelja sobom za zabavu</h1>
+</div>
+
+<div style="margin-top: 15%; width: 100%;">
+    <button onclick="location.href = '@Url.Action("ObradaZahtjevaZaSobu", "UpraviteljSobomZaZabavu")'" type="button" style="margin-left: 35%; height: 200px; width: 300px; font-size: 30px">Obrada zahtjeva za sobu</button>
+</div>

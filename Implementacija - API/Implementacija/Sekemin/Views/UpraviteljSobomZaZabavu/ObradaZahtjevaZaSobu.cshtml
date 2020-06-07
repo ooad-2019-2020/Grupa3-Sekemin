@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Sekemin.Models.ZahtjevSobaZaZabavu>
+
+@{
+    ViewData["Title"] = "ObradaZahtjevaZaSobu";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Prezime studenta
+            </th>
+            <th>
+                Ime studenta
+            </th>
+            <th>
+                Datum rezervacije
+            </th>
+            <th>
+                Trajanje rezervacije
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Student.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Student.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.DatumSlanja)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Trajanje)
+                </td>
+
+                <td>
+                    <a asp-action="ObradiZahtjev" asp-route-zahtjevId="@item.Id">Obradi zahtjev</a>
+                    <a asp-action="OdbijZahtjev" asp-route-zahtjevId="@item.Id">Odbij zahtjev</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="margin-top: 15%; width: 100%">
+    <button onclick="location.href = '@Url.Action("Index", "UpraviteljSobomZaZabavu")'" type="button" style="margin-left: 45%">Vrati nazad</button>
+</div>
