@@ -34,7 +34,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                       
+
                         @if (SignInManager.IsSignedIn(User))
                         {
 
@@ -52,9 +52,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register">Registruj korisnika</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/RegistrirajStudenta">Registruj studenta</a>
-                                </li>
+                               
 
                             }
                             if (user.Uloga == Uloga.Student)
@@ -62,8 +60,10 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Student" asp-action="Index">Moja početna</a>
-                                </li>                           
-                        
+                                </li>
+
+
+
                             }
                             if (user.Uloga == Uloga.UpraviteljSobomZaZabavu)
                             {
@@ -87,6 +87,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Soba" asp-action="Create">Kreiraj sobu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/RegistrirajStudenta">Registruj studenta</a>
                                 </li>
                             }
                         }

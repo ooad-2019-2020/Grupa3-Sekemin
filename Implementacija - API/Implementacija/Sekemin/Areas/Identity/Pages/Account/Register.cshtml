@@ -4,12 +4,14 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
+<link rel="stylesheet" href="~/css/admin.css" />
+
+
 
 <div class="row">
     <div class="col-md-4" >
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post" >
-            <h4>Create a new account.</h4>
+            <h4>Kreirajte admina ili upravitelja</h4>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
