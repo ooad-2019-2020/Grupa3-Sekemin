@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using Sekemin.Data;
 using Sekemin.Models;
 
 namespace Sekemin.Controllers {
+    [Authorize(Roles ="Student")]
     public class StudentController : Controller {
         private readonly BazaContext context;
         private readonly UserManager<Osoba> userManager;

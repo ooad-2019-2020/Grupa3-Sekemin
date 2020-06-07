@@ -11,19 +11,19 @@
             var ImeKorisnika = user.Ime;
 
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Zdravo @ImeKorisnika!</a>
+                <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Zdravo @ImeKorisnika!</a>
             </li>
 
             <li class="nav-item">
                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                    <button type="submit" class="nav-link btn btn-link text-dark">Odjavi se</button>
+                    <button type="submit" class="nav-link btn btn-link text-white">Odjavi se</button>
                 </form>
             </li>
         }
         else
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Prijavi se</a>
+                <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">Prijavi se</a>
             </li>
 
 

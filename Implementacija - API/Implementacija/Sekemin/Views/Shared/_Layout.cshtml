@@ -34,9 +34,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                       
                         @if (SignInManager.IsSignedIn(User))
                         {
 
@@ -64,18 +62,8 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Student" asp-action="Index">Moja početna</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Biblioteka" asp-action="">Biblioteka</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="SobaZaZabavu" asp-action="">Soba za zabavu</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="ZahtjevZaSmjestaj" asp-action="Create">Smještaj</a>
-                                </li>
-
-
+                                </li>                           
+                        
                             }
                             if (user.Uloga == Uloga.UpraviteljSobomZaZabavu)
                             {
