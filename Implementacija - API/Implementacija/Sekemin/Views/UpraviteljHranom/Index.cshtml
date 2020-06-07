@@ -1,0 +1,148 @@
+﻿@model Tuple<IEnumerable<Sekemin.Models.Radnik>, IEnumerable<Sekemin.Models.Jelo>>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<style>
+    table {
+        border: 1px solid white;
+    }
+
+    p{
+        color:wheat;
+    }
+
+    tr{
+        color:wheat;
+    }
+
+     a:link{
+        color:whitesmoke;
+        text-decoration-style:double;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    
+   
+    
+</style>
+
+
+<div id="div.center" style="margin-left:30%;">
+    <h1 id="header" style="color:wheat;">Dobrodošli @ViewBag.Ime </h1>
+</div>
+<link rel="stylesheet" href="~/css/UpraviteljHranom.css" />
+
+<div id="table.radnici" style="float: left; width: 50%;">
+
+    <h4 id="OpisTabeleRadnici" style="float:left; margin-top:20%;" class="text-white"> Lista svih radnika </h4>
+    <table class="table">
+        <thead>
+            <tr>
+                @{
+                    var osoba = Model.Item1 as Radnik;
+                }
+                <th>
+                    @Html.DisplayNameFor(model => osoba.Ime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => osoba.Prezime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => osoba.DatumRodjenja)
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Item1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prezime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DatumRodjenja)
+                    </td>
+                    <td>
+
+                        <a  asp-action="DetailsRadnik" asp-route-id="@item.Id">Details</a> |
+                        <a  asp-action="DeleteRadnika" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+
+    <div style="margin:auto; width:100%;">
+        <form method="get" asp-action="CreateRadnik">
+            <button type="submit" class="btn btn-light">Dodaj radnika</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+<div id="table.jela" style="float: right; width: 50%;" class="table">
+
+    <h4 id="OpisTabeleJela" style="float:left; margin-top:20%; color:wheat;"> Menu </h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                @{
+                    var jelo = Model.Item2 as Jelo;
+                }
+                <th>
+                    @Html.DisplayNameFor(model => jelo.Naziv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => jelo.Opis)
+                </th>
+               <th>
+
+               </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Item2)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naziv)
+                    </td>      
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Opis)
+                    </td>
+                    <td>
+
+                        <a asp-action="DetailsJelo" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="DeleteJelo" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+   
+    <div style="margin-left:10px; width:100%;">
+        <form method="get" asp-action="CreateJelo" asp-controller="UpraviteljHranom">
+            <button type="submit" class="btn btn-light">Dodaj novo jelo</button>
+        </form>
+    </div>
+
+</div>

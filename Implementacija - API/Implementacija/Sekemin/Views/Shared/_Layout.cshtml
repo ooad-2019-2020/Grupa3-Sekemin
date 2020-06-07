@@ -1,0 +1,127 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Osoba> SignInManager
+@inject UserManager<Osoba> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sekemin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+       
+       
+
+        .daj {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <header >
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3">
+            <div class="container"  >
+                <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" style="height:50px;width:50px;"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1" style="float:left;">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+
+                            var user = await UserManager.GetUserAsync(User);
+                            var ImePrezime = user.Ime + user.Prezime;
+                            var ImeKorisnika = user.Ime;
+                            if (user.Uloga == Uloga.Administrator)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Admin" asp-action="KreirajUlogu">Kreiraj ulogu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Admin" asp-action="Index">Pregled korisnika</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register">Registruj korisnika</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/RegistrirajStudenta">Registruj studenta</a>
+                                </li>
+
+                            }
+                            if (user.Uloga == Uloga.Student)
+                            {
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Student" asp-action="Index">Moja početna</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Biblioteka" asp-action="">Biblioteka</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="SobaZaZabavu" asp-action="">Soba za zabavu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="ZahtjevZaSmjestaj" asp-action="Create">Smještaj</a>
+                                </li>
+
+
+                            }
+                            if (user.Uloga == Uloga.UpraviteljSobomZaZabavu)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="">Bilo šta ocm</a>
+                                </li>
+                            }
+                            if (user.Uloga == Uloga.UpraviteljBibliotekom)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="">Isto bilo šta ba</a>
+                                </li>
+                            }
+                            if (user.Uloga == Uloga.UpraviteljZaduzivanja)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Zahtjev" asp-action="GetZahtjeviZaSmjestaj">Zaduživanje</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Zahtjev" asp-action="GetZahtjeviZaRazduzivanje">Razduživanje</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Soba" asp-action="Create">Kreiraj sobu</a>
+                                </li>
+                            }
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" >
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+   
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Sekemin - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

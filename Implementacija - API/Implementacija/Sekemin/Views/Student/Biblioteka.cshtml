@@ -1,0 +1,86 @@
+﻿@model Tuple<IEnumerable<Sekemin.Models.Knjiga>, Knjiga>
+@{
+    ViewData["Title"] = "Biblioteka";
+
+}
+
+    <div style="width: 100%;">
+        <h3 style="margin-left: 40%">Knjige dostupne za podizanje</h3>
+    </div>
+
+    <table class="table" style="margin-top: 30px">
+        <thead>
+            <tr>
+                <th>
+                    Naziv djela
+                </th>
+                <th>
+                    Ime pisca
+                </th>
+                <th>
+                    Broj izdanja
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Item1) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NazivDjela)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImePisca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BrojIzdanja)
+                    </td>
+                    <td>
+                        <a asp-action="PodigniKnjigu" asp-route-knjigaId="@item.Id">Podigni knjigu</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+<div style="width: 100%; margin-top: 80px">
+    <h3 style="margin-left: 40%">Trenutno podignuta knjiga</h3>
+</div>
+
+<table class="table" style="margin-top: 30px">
+    <thead>
+        <tr>
+            <th>
+                Naziv djela
+            </th>
+            <th>
+                Ime pisca
+            </th>
+            <th>
+                Broj izdanja
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+            @if (Model.Item2 != null) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Item2.NazivDjela)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Item2.ImePisca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Item2.BrojIzdanja)
+                    </td>
+                    <td>
+                        <a asp-action="VratiKnjigu" asp-route-knjigaId="@Model.Item2.Id">Vrati knjigu</a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+<div style="margin-top: 200px; width: 100%">
+    <button type="button">Vrati nazad</button>
+</div>

@@ -1,0 +1,77 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4" >
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post" >
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Grad"></label>
+                <input asp-for="Input.Grad" class="form-control" />
+                <span asp-validation-for="Input.Grad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Ime"></label>
+                <input asp-for="Input.Ime" class="form-control" />
+                <span asp-validation-for="Input.Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Prezime"></label>
+                <input asp-for="Input.Prezime" class="form-control" />
+                <span asp-validation-for="Input.Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.DatumRodjenja"></label>
+                <input asp-for="Input.DatumRodjenja" class="form-control" />
+                <span asp-validation-for="Input.DatumRodjenja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Spol"></label>
+                <select asp-for="Input.Spol" asp-items="Html.GetEnumSelectList<Spol>()" class="form-control">
+                    <option selected="selected" value="">Spol</option>
+                </select>
+                <span asp-validation-for="Input.Spol" class="text-danger"></span>
+            </div>
+            <div class="form-group" >
+                <label asp-for="Input.Uloga"></label>
+                @{ 
+                    var lista = Html.GetEnumSelectList<Uloga>().ToList();
+                    lista.RemoveAt(5);
+                }
+                <select asp-for="Input.Uloga" asp-items="lista" class="form-control">
+                    <option selected="selected" value="">Uloga</option>
+                </select>
+                <span asp-validation-for="Input.Uloga" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+   
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

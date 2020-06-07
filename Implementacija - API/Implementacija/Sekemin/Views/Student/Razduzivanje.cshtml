@@ -1,0 +1,35 @@
+@model Sekemin.Models.Student
+@{
+    ViewData["Title"] = "Razduzivanje";
+}
+
+<div style="width: 100%">
+    <h1 style="margin-left: 30%">Potvrda zahtjeva za razduživanje</h1>
+</div>
+
+<div style="margin-top: 30px">
+    <div class="form-group">
+        <label style="font-weight: bold">Prezime:</label>
+        <label style="margin-left: 7px">@Model.Prezime</label>
+    </div>
+
+    <div class="form-group" style="margin-top: 10px">
+        <label style="font-weight: bold">Ime:</label>
+        <label style="margin-left: 7px">@Model.Ime</label>
+    </div>
+
+    <div class="form-group" style="margin-top: 10px">
+        <label style="font-weight: bold">Fakultet:</label>
+        <label style="margin-left: 7px">@Model.Fakultet</label>
+    </div>
+
+    <div class="form-group" style="margin-top: 10px">
+        <label style="font-weight: bold">Godina studija:</label>
+        <label style="margin-left: 7px">@Model.GodinaStudija</label>
+    </div>
+
+    <div style="margin-top: 20px">
+        <button onclick="location.href = '@Url.Action("PotvrdaRazduzivanja", "Student")'" type="button" style="background-color: crimson">Potvrdi razduživanje</button>
+        <button onclick="location.href = '@Url.Action("Index", "Student")'" type="button">Vrati nazad</button>
+    </div>
+</div>

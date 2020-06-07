@@ -1,0 +1,19 @@
+body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url("meso.jpg");
+     background-repeat: no-repeat;
+    background-size:cover; 
+    height: 100vh;
+}
+
+.tekst{
+    color: wheat;
+    
+}
+
+th{
+    color: wheat;
+}
+
+td{
+    color: wheat;
+}

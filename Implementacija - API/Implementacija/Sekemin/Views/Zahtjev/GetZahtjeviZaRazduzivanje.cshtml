@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Sekemin.Models.ZahtjevZaRazduzivanje>
+
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumSlanja)
+            </th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatumSlanja)
+                </td>
+
+                <td>
+
+                    <a asp-controller="Admin" asp-action="Details" asp-route-id="@item.Id">Odobri i obriši račun</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalji</a>
+                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

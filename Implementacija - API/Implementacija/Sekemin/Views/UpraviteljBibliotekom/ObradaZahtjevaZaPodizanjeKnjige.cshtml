@@ -1,0 +1,48 @@
+@model IEnumerable<Sekemin.Models.ZahtjevZaPodizanjeKnjige>
+
+@{
+    ViewData["Title"] = "ObradaZahtjevaZaPodizanjeKnjige";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Naziv djela
+            </th>
+            <th>
+                Ime pisca
+            </th>
+            <th>
+                Prezime studenta
+            </th>
+            <th>
+                Ime studenta
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model){
+            <tr>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Knjiga.NazivDjela)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Knjiga.ImePisca)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Student.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Student.Ime)
+                </td>
+                
+                <td>
+                    <a asp-action="ObradiZahtjev" asp-route-zahtjevId="@item.Id">Obradi zahtjev</a>
+                    <a asp-action="OdbijZahtjev" asp-route-zahtjevId="@item.Id">Odbij zahtjev</a>
+                </td>
+            </tr>
+                }
+    </tbody>
+</table>

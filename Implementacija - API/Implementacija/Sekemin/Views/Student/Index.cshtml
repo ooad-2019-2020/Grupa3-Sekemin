@@ -1,0 +1,59 @@
+﻿@model Sekemin.Models.Student
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style type="text/css">
+    #div.center {
+        text-align: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    #header {
+        text-align: center;
+    }
+
+    .left_btn {
+        float: left;
+    }
+
+    .right_btn {
+        float: right;
+    }
+</style>
+
+<link rel="stylesheet" href="~/css/StudentPocetna.css" />
+
+<div id="div.center">
+    <h1 id="header">Dobrodošli @ViewBag.Ime </h1>
+</div>
+<div style="float:left; width:50%;">
+    <button type="button" style="float: left; background-color: cornflowerblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Uplata sredstava</button>
+</div>
+
+<div style="float: right; width:50%;">
+    <button type="button" style="float: right; background-color: cornflowerblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Razduži se</button>
+</div>
+
+<div style="float: left; width: 50%; margin-top: 200px">
+    <button type="button" style="height: 150px; width: 70%; float: right; background-color: transparent; font-weight: bold; font-size: 40px">
+    <a class="nav-link text-white" asp-area="" asp-controller="ZahtjevZaSmjestaj" asp-action="Create">Produži boravak</a></button>
+</div>
+
+<div style="float: right; width: 50%; margin-top: 200px">
+    <button type="button"  style="height: 150px; width: 70%; float: left; background-color: transparent; font-weight: bold; font-size: 40px">
+    <a class="nav-link text-white" asp-area="" asp-controller="Student" asp-action="Biblioteka">Podigni knjigu</a></button>
+</div>
+
+<div style="float: left; width: 50%;">
+    <button type="button"  style="height: 150px; width: 70%; float: right; background-color: transparent; font-weight: bold; font-size: 40px">
+        <a class="nav-link text-white" asp-area="" asp-controller="Student" asp-action="SobaZaZabavu">Rezerviši sobu za zabavu</a>
+    </button>
+</div>
+
+<div style="float: right; width: 50%;">
+    <button type="button"  style="height: 150px; width: 70%; float: left; background-color: transparent; font-weight: bold; font-size: 40px">
+        <a class="nav-link text-white" asp-area="" asp-controller="Student" asp-action="Jelovnik">Šta ima jest</a></button>
+</div>
+

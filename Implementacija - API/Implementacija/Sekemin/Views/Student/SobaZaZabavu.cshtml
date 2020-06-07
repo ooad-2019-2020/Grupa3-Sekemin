@@ -1,0 +1,38 @@
+﻿@model Sekemin.Models.ZahtjevSobaZaZabavu
+
+@{
+    ViewData["Title"] = "SobaZaZabavu";
+}
+
+<div style="margin-top: 10px; width: 100%">
+    <h1 style="position: center">Rezervacija sobe za zabavu</h1>
+</div>
+
+<form asp-action="Rezervisi">
+    <div class="form-group" style="margin-top: 50px; width: 100%">
+        <label>Datum rezervacije:</label>
+        <input type="date" asp-for="DatumSlanja" style="margin-left: 47px" />
+    </div>
+
+    <br />
+
+    <div class="form-group" style="width: 100%">
+        <label>Vrijeme početka:</label>
+        <input type="time" name="pocetakRezervacijeSobe" id="pocetakRezervacijeSobe" style="margin-left: 60px" />
+    </div>
+
+    <br />
+
+    <div class="form-group" style="width: 100%">
+        <label>Trajanje (u minutama):</label>
+        <input type="number" asp-for="Trajanje" style="margin-left: 23px" />
+    </div>
+
+    <br />
+    <br />
+
+    <div class="form-group" style="width: 100%">
+        <input type="submit" value="Rezerviši" class="btn btn-primary" style="margin-left: 150px" />
+    </div>
+</form>
+

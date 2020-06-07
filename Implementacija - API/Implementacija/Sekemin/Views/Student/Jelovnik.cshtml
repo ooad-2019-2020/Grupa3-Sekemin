@@ -1,0 +1,50 @@
+﻿@model Tuple<IEnumerable<Sekemin.Models.Jelo>, Sekemin.Models.Student>
+@{
+    ViewData["Title"] = "Jelovnik";
+}
+
+<link rel="stylesheet" href="~/css/jelovnik.css" />
+
+<div style="width: 100%;">
+    <h6 class="tekst">Preostalo ukupno obroka: @Model.Item2.BrojBonova</h6>
+</div>
+
+<div style="width: 100%; margin-top: 50px;">
+    <h5 class="tekst" sstyle="margin-left: 55%; margin-right: 10%">Odaberite željeni obrok sa sljedeće liste</h5>
+</div>
+
+<div style="width: 50%; margin-top: 100px; float: left; height: 150px">
+    <input type="text" id="odabranaHrana" name="hrana" placeholder="Odabrana hrana" style="position: center; margin-top: 10%; margin-right: 75%; margin-left: 25%" />
+</div>
+<div class="list-group" style="margin-top: 100px; width:50%; float: right; max-height: 150px; overflow: auto;">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Naziv jela
+                </th>
+                <th>
+                    Plaćanje
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var item in Model.Item1) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naziv)
+                    </td>
+                    <td>
+                        <a asp-action="PlatiHranu">Kupi jelo</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div style="width: 50%; margin-top: 20%; float: left;">
+    <button type="button" style="float: right; margin-right: 20px" asp-action="Index" asp-controller="Student" class="btn btn-light">Nazad</button>
+</div>
+

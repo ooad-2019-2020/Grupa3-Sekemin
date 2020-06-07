@@ -1,0 +1,22 @@
+@model Sekemin.Models.UpraviteljBibliotekom
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/UpraviteljBibliotekom.css"/>
+
+<div style="width: 100%">
+    <h1 style="margin-left: 17%">Početni ekran za upravitelja bibliotekom</h1>
+</div>
+
+<div style="margin-top: 20%; width: 50%; float: left">
+    <button onclick="location.href='@Url.Action("Index", "Knjiga")'" type="button" style="float: right; height:300px; width: 400px; font-family: 'Brush Script MT'; font-size: 100px; background-color: transparent">Evidencija knjiga</button>
+</div>
+
+<div style="margin-top: 20%; width:50%; float: right">
+    <button onclick="location.href='@Url.Action("ObradaZahtjevaZaPodizanjeKnjige", "UpraviteljBibliotekom")'" type="button" style="float: left; height:300px; width: 400px; font-family: 'Brush Script MT'; font-size: 100px; background-color: transparent">Zahtjevi za obradu</button>
+</div>
+
+<div style="margin-top: 40%; width:100%">
+    <button onclick="location.href='@Url.Action("Create", "Knjiga")'" type="button" style="margin-top:5%; margin-left: 46%; width: 100px; background-color: transparent">Dodaj novu knjigu</button>
+</div>
